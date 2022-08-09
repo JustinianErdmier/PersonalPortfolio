@@ -2,11 +2,57 @@
 
 <PageTitle>Justin Erdmier's Portfolio</PageTitle>
 
+<MudThemeProvider Theme="appTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-<SiteHeader />
+<MudLayout>
 
-<main class="body__content">
-    @Body
-</main>
+    <MudAppBar Color="Color.Primary"
+               Fixed="true">
 
-<SiteFooter />
+        <MudText Typo="Typo.h4" Style="width: 100%; font-family: 'Pacifico', cursive;">
+            Justinian Codes
+        </MudText>
+
+        <NavMenu />
+
+    </MudAppBar>
+
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+
+</MudLayout>
+
+@code
+{
+    private readonly MudTheme appTheme = new MudTheme
+    {
+        Palette = new Palette
+        {
+            Primary = "#4275fa",
+            Secondary = "#2e2d56",
+            Tertiary = "#929292",
+            TextPrimary = "#5f5e79",
+            Background = "#ffffff"
+        },
+        Typography = new Typography
+        {
+            Default = new Default
+            {
+                FontFamily = new[] { "Poppins", "sans-serif" },
+                FontSize = "1rem",
+                LineHeight = 1
+            }
+        }
+    };
+}
+
+@* <SiteHeader /> *@
+@* *@
+@* <main class="body__content"> *@
+@*     @Body *@
+@* </main> *@
+@* *@
+@* <SiteFooter /> *@

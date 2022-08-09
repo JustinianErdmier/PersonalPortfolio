@@ -1,38 +1,77 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand"
-           href="">PersonalPortfolio.WebUI</a>
-        <button title="Navigation menu"
-                class="navbar-toggler"
-                @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿<MudStack Row="true"
+          Spacing="8"
+          AlignItems="AlignItems.Center"
+          Justify="Justify.FlexEnd"
+          Style="width: 100%">
 
-<div class="@NavMenuCssClass"
-     @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link"
-                     href=""
-                     Match="NavLinkMatch.All">
-                <span class="oi oi-home"
-                      aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    <MudNavLink Href=""
+                Match="NavLinkMatch.All"
+                Style="width: fit-content">
+        About
+    </MudNavLink>
 
-@code {
+    <MudNavLink Href=""
+                Match="NavLinkMatch.All"
+                Style="width: fit-content">
+        Skills
+    </MudNavLink>
 
-    private bool collapseNavMenu = true;
+    <MudNavLink Href=""
+                Match="NavLinkMatch.All"
+                Style="width: fit-content">
+        Portfolio
+    </MudNavLink>
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    <MudNavLink Href=""
+                Match="NavLinkMatch.All"
+                Style="width: fit-content">
+        Blog
+    </MudNavLink>
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = ! collapseNavMenu;
-    }
+    <MudButton Variant="Variant.Filled"
+               Style="width: fit-content; background-color: #5180fa; color: white">
+        <MudText>
+            Say Hello 👋
+        </MudText>
+    </MudButton>
 
-}
+</MudStack>
+
+@* <div class="top-row ps-3 navbar navbar-dark"> *@
+@*     <div class="container-fluid"> *@
+@*         <a class="navbar-brand" *@
+@*            href="">PersonalPortfolio.WebUI</a> *@
+@*         <button title="Navigation menu" *@
+@*                 class="navbar-toggler" *@
+@*                 @onclick="ToggleNavMenu"> *@
+@*             <span class="navbar-toggler-icon"></span> *@
+@*         </button> *@
+@*     </div> *@
+@* </div> *@
+@* *@
+@* <div class="@NavMenuCssClass" *@
+@*      @onclick="ToggleNavMenu"> *@
+@*     <nav class="flex-column"> *@
+@*         <div class="nav-item px-3"> *@
+@*             <NavLink class="nav-link" *@
+@*                      href="" *@
+@*                      Match="NavLinkMatch.All"> *@
+@*                 <span class="oi oi-home" *@
+@*                       aria-hidden="true"></span> Home *@
+@*             </NavLink> *@
+@*         </div> *@
+@*     </nav> *@
+@* </div> *@
+@* *@
+@* @code { *@
+@* *@
+@*     private bool collapseNavMenu = true; *@
+@* *@
+@*     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null; *@
+@* *@
+@*     private void ToggleNavMenu() *@
+@*     { *@
+@*         collapseNavMenu = ! collapseNavMenu; *@
+@*     } *@
+@* *@
+@* } *@
